@@ -7,4 +7,4 @@ class Menu(models.Model):
 
 class SubMenu(models.Model):
     dish_name = models.CharField(max_length=100)
-    price = models.IntegerField(max_length=10)
+    price = models.IntegerField()
