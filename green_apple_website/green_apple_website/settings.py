@@ -35,13 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'order.apps.OrderConfig',
     'about_us.apps.AboutUsConfig',
     'book_a_table.apps.BookATableConfig',
     'drop_a_note.apps.DropANoteConfig',
     'events.apps.EventsConfig',
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
-    'order.apps.OrderConfig',
+
 ]
 
 MIDDLEWARE = [
