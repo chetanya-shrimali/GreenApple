@@ -15,8 +15,8 @@ class CustomerForm(forms.ModelForm):
 #         fields = ('total_price', )
 #
 
-class OrderDetailForm(forms.ModelForm):
-    class Meta:
-        model = OrderDetail
-        fields = ('selected_item', 'quantity', 'price')
+# class OrderDetailForm(forms.ModelForm):
+#     class Meta:
+#         model = OrderDetail
+#         fields = ('selected_item', 'quantity', 'price')
 
