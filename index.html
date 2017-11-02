@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <html lang="en">
 
 <head>
@@ -37,73 +41,171 @@
 
 <body>
 <!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
 <![endif]-->
 
-<!-- Navigation section -->
-<div class="navbar navbar-default navbar-fixed-top green-bg" role="navigation">
-    <div class="container">
 
+<header class="navbar navbar-fixed-top" role="banner" style="background-color:#1c262f; ">
+    <div class="container">
         <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon icon-bar"></span>
-                <span class="icon icon-bar"></span>
-                <span class="icon icon-bar"></span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: #fafbfc"></span>
+                <span class="icon-bar" style="background-color: #fafbfc"></span>
+                <span class="icon-bar" style="background-color: #fafbfc"></span>
             </button>
+            <a class="navbar-brand" href="index.html" style="font-family:'Open Sans',
+                          sans-serif; color:#fafbfc;font-size:32px;letter-spacing: 3px;">GREEN APPLE</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav" style="margin-left: 70px">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="order.html">Order Online</a></li>
+                <li><a href="services.html">Reservations</a></li>
+                <li><a href="services.html">Order</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
     </div>
-</div>
-<!-- Home section -->
-<section id="home" class="parallax-section green-bg">
-    <div class="container">
-        <div class="row">
+</header><!--/header-->
 
-            <!--<div class="col-md-offset-2 col-md-8 col-sm-12">-->
-                <!--<h1 class="wow fadeInUp" data-wow-delay="0.6s"style="font-family: 'Handlee', cursive;-->
-<!--font-family: 'Limelight', cursive;font-size: 100px;">Green Apple</h1>-->
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active" style="background-image: url(img/slides/1.jpg);background-size: cover;height: 60vh;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(img/slides/2.jpg);background-size: cover;height: 60vh;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content center centered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(img/slides/3.jpg);background-size: cover;height: 60vh;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.carousel-inner-->
+    </div><!--/.carousel-->
+    <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+        <i class="icon-angle-left"></i>
+    </a>
+    <a class="next hidden-xs" href="#main-slider" data-slide="next">
+        <i class="icon-angle-right"></i>
+    </a>
+</section><!--/#main-slider-->
+<!--<section id="main-slider" class="no-margin">-->
+    <!--<div class="item active" style="background-image: url(img/slides/1.jpg);background-size: cover;height: 60vh;">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-4"></div>-->
+                <!--<div class="col-sm-4"></div>-->
+                <!--<div class="col-sm-4">-->
+                <!--</div>-->
             <!--</div>-->
-
-        </div>
-    </div>
-</section>
-
-
-
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 
 <section id="welcome">
     <div class="container">
         <div class="row">
-            <h3>Welcome</h3>
+            <h3>Welcome </h3>
             <br>
-            <blockquote>
-                Donec elementum mi vitae enim fermentum lobortis. In hac habitasse platea dictumst.
-                Ut pellentesque, orci sed mattis consequat, libero ante In hac habitasse platea dictumst. Ut pellentesque,
-                orci sed mattis consequat, libero ante lacinia arcu, ac porta lacus urna in lorem. </blockquote>
+            <h4>
+                A Unique place for fine Dining with calm and peace naturally.
+                Architectured and beautifully designed with modern are and comforts
+                with its ambience and all kinds of amenities.<br>Make those moments your memories to cherish. </h4>
             <br><br>
         </div>
     </div>
 </section>
 
+<section id="menu">
+    <div class="container">
+        <div class="row">
+            <h3>Our Menu</h3>
+            <br>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <div class=" menu-item">
+                    <a href="menu.html"><img src="img/menu/1.png"></a>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="menu-item">
+                    <a href="menu.html"><img src="img/menu/2.png"></a>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="menu-item">
+                    <a href="menu.html"><img src="img/menu/3.png"></a>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="menu-item">
+                    <a href="menu.html"><img src="img/menu/4.png"></a>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="menu-item">
+                    <a href="menu.html"><img src="img/menu/5.png"></a>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+</section>
+
+<section id="events">
+    <div class="container">
+        <div class="row">
+        <h3>Our Events</h3>
+        <br>
+    <div class="blog-card alt">
+        <div class="photo photo2"></div>
+        <div class="description">
+            <h1>Enjoy Christmas !</h1>
+            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. or sit amet, consectetur adipisicing elit. Ad e
+                or sit amet, consectetur adipisicing elit. Ad e or sit amet, consectetur adipisicing elit. Ad e or sit amet, consectetur adipisicing elit. Ad e Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
 <!-- Footer -->
-<div class="footer green-bg">
+<div class="footer">
     <div class="container">
 
         <div class="row">
 
-            <div class="col-footer col-sm-6 col-xs-12">
+            <div class="col-footer col-md-4 col-xs-6">
                 <h3>Contact Us</h3>
                 <p class="contact-us-details">
                     <b>Address:</b> Indian Institute of Information Technology, Vadodara (Gandhinagar Campus)<br/>
@@ -112,21 +214,29 @@
                     <b>Email:</b> <a href="mailto:201552074@iiitvadodara.ac.in">201552074@iiitvadodara.ac.in</a>
                 </p>
             </div>
-            <div class="col-footer col-sm-6 col-xs-12">
+            <div class="col-footer col-md-4 col-xs-6">
                 <h3>Our Social Networks</h3>
-                <p>We are always there to stay connected. Reach us through various social media platform. Your views and suggestions are welcome.</p>
+                <p>We are always there to stay connected. Reach us through various social media platform. Your views and
+                    suggestions are welcome.</p>
                 <div>
-                    <a href="#" style="color: #032276;"><i class="icon-facebook"></i></a>
-                    <a href="#" style="color: #02b3e4;"><i class="icon-twitter"></i></a>
-                    <a href="#" style="color: #cb402b;"><i class="icon-google-plus"></i></a>
-                    <a href="#" style="color: #02739a;"><i class="icon-linkedin"></i></a>
+                    <img src="img/icons/facebook.png" width="32" alt="Facebook">
+                    <img src="img/icons/twitter.png" width="32" alt="Twitter">
+                    <img src="img/icons/linkedin.png" width="32" alt="LinkedIn">
+                    <img src="img/icons/rss.png" width="32" alt="RSS Feed">
                 </div>
+            </div>
+            <div class="col-footer col-md-4 col-xs-6">
+                <h3>About Our Project</h3>
+                <p>Electrolocus is an idea that focuses on the stressful question of our daily life "How to reduce our
+                    electricty bill".
+                    Here we present various aspects at a single platform that will let you judge your needs better.</p>
             </div>
 
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="footer-copyright">&copy; 2017 <a href="http://www.github.com/Akriti3011/Electrolocus">IIITV Students</a></div>
+                <div class="footer-copyright">&copy; 2017 <a href="http://www.github.com/Akriti3011/Electrolocus">IIITV
+                    Students</a></div>
             </div>
         </div>
     </div>
