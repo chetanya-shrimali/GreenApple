@@ -6,7 +6,7 @@ from .models import Customer, OrderDetail, Order
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
-        fields = ('name', 'address', 'phone_number')
+        fields = ('name', 'address', 'phone_number',)
 
 
 # class OrderForm(forms.ModelForm)
