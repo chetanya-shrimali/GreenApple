@@ -12,4 +12,4 @@ class MenuForm(forms.ModelForm):
 class SubMenuForm(forms.ModelForm):
     class Meta:
         model = SubMenu
-        fields = ('dish_name', 'price')
+        fields = ('dish_name', 'price',)
