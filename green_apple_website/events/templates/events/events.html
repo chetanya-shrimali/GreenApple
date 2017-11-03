@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
 {% block body %}
+<br><br><br>
+{% for event in all_events %}
+<h2>{{ event.title }}</h2>
+<p><img src="{{ event.image.url }}" height="200px" width="200px"></p>
+<p>{{ event.description }}</p>
+{% endfor %}
 {% endblock %}
