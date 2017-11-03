@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 
@@ -9,13 +11,10 @@ class Customer(models.Model):
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    total_price = models.IntegerField()
-    total_items = models.IntegerField()
+    date = models.DateField(default=datetime.date.today)
     message = models.CharField(max_length=500)
 
 
-class OrderDetail(models.Model):
+class Dish(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    selected_item = models.CharField(max_length=50)
-    quantity = models.IntegerField()
-    price = models.IntegerField()
+    name = models.CharField(max_length=50)

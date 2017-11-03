@@ -53,12 +53,16 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{% url 'home:index' %}">Home</a></li>
+                <li class="active"><a href="{% url 'home:index' %}">Home</a>
+                </li>
+                <li><a href="{% url 'menu:menu' %}">Menu</a></li>
+
+                <li><a href="{% url 'order:order' %}">Order</a></li>
+                <li><a href="{% url 'book_a_table:book' %}">Book-A-Table</a>
+                </li>
+                <li><a href="{% url 'events:events' %}">Events</a></li>
                 <li><a href="{% url 'about_us:about' %}">About
                     Us</a></li>
-                <li><a href="{% url 'book_a_table:book' %}">Book-A-Table</a></li>
-                <li><a href="{% url 'order:order' %}">Order</a></li>
-                <li><a href="{% url 'events:events' %}">Events</a></li>
                 <li>
                     <a href="{% url 'drop_a_note:drop_note' %}">Contact</a>
                 </li>
@@ -95,12 +99,12 @@
                     various social media platform. Your views and
                     suggestions are welcome.</p>
                 <div>
-                    <img  width="32"
+                    <img width="32"
                          alt="Facebook">
-                    <img  width="32" alt="Twitter">
-                    <img  width="32"
+                    <img width="32" alt="Twitter">
+                    <img width="32"
                          alt="LinkedIn">
-                    <img  width="32" alt="RSS Feed">
+                    <img width="32" alt="RSS Feed">
                 </div>
             </div>
             <div class="col-footer col-md-4 col-xs-6">
