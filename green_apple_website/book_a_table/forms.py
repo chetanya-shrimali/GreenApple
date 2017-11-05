@@ -13,4 +13,4 @@ class BookForm(forms.ModelForm):
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = apps.get_model('order.Customer')
-        fields = []
+        fields = ['name', 'phone_number']
