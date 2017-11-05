@@ -3,6 +3,7 @@ from urllib.request import urlopen
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from twilio import rest
 
 
 def index(request):
@@ -30,4 +31,15 @@ def maps_api(request):
 
 
 def message_api(request):
+    # put your own credentials here
+    account_sid = "ACaf877765944a5bd7a55c53011d66ce1e"  # your sid here
+    auth_token = "636da8b8dbadffe6e66beb6359f3e313"  # auth token from twilio
+    client = rest.Client(account_sid, auth_token)
+    client.messages.create(
+        to="+918233813183",
+        from_="+12283258038",
+        body="Hey!! Its twilio!!",
+        media_url="https://climacons.herokuapp.com/clear.png")
+
+    print('done')
     return HttpResponse("Message API")
