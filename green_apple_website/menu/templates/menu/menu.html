@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
 {% block body %}
+<br><br>
+{% for menu in all_menu %}
+<a href="{% url 'menu:sub_menu' menu.pk %}">
+    <h1>{{ menu.category_name }}</h1></a>
+{% endfor %}
 {% endblock %}
