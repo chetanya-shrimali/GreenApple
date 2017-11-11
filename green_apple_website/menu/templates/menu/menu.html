@@ -3,7 +3,8 @@
 {% block body %}
 <br><br>
 {% for menu in all_menu %}
+<img src="{{ menu.category_image.url }}" width="200px" height="200px"><br>
 <a href="{% url 'menu:sub_menu' menu.pk %}">
-    <h1>{{ menu.category_name }}</h1></a>
+  <h1>{{ menu.category_name }}</h1></a>
 {% endfor %}
 {% endblock %}
