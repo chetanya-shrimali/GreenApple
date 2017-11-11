@@ -1,23 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from drop_a_note.forms import *
+from django.views.decorators.csrf import csrf_protect
 
 
 def drop_note(request):
     return render(request, 'drop_a_note/contact.html')
 
 
+@csrf_protect
 def contact_us(request):
     if request.method == 'POST':
-        contact_form = NoteForm(data=request.POST)
-        if contact_form.is_valid():
-            contact = contact_form.save()
-            contact.save()
-            return render(request, 'home/index.html', {})
+        note_form = NoteForm(request.POST)
+        if note_form.is_valid():
+            notes = note_form.save()
+            notes.save()
+            return HttpResponseRedirect(reverse('home:index'))
         else:
-            print(contact_form.errors)
+            print(note_form.errors)
             return redirect('home/index.html')
 
     else:
-        contact_form = ContactForm()
+        note_form = NoteForm()
 
-    return render(request, 'home/contact.html', {'contact_form': contact_form})
+    return render(request, 'drop_a_note/contact.html', {'note_form': note_form})
