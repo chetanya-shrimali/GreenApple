@@ -3,13 +3,16 @@ from django.shortcuts import render
 # import twilio
 # import twilio.rest
 import json
+from django.apps import apps
 
 
 # from urllib.request import urlopen
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    menu_model = apps.get_model('menu.Menu')
+    menu_items = menu_model.objects.all().order_by('id')[:5]
+    return render(request, 'home/index.html', {'menu_items': menu_items})
 
 
 def maps_api(request):
