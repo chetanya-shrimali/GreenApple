@@ -2,9 +2,26 @@
 {% block title %}{% endblock %}
 {% block body %}
 <br><br>
-{% for menu in all_menu %}
-<img src="{{ menu.category_image.url }}" width="200px" height="200px"><br>
-<a href="{% url 'menu:sub_menu' menu.pk %}">
-  <h1>{{ menu.category_name }}</h1></a>
-{% endfor %}
+<link
+    href="https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);"
+    rel="stylesheet"/>;
+<section id="main-menu" class="section">
+  <div class="container">
+    <div class="row">
+      <h2> OUR MENU</h2>
+      {% for menu in all_menu %}
+      <figure class="snip1206 hover">
+        <img
+            src="{{ menu.category_image.url }}"
+            alt="sample13"/>
+        <figcaption>
+          <h2><a href="{% url 'menu:sub_menu' menu.pk %}">
+            <h1>{{ menu.category_name }}</h1></a></h2>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
 {% endblock %}
