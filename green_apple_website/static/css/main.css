@@ -992,7 +992,7 @@ figure.snip1206.hover figcaption h2 {
 .order-menu-card {
     margin: 40px 30px;
     padding: 20px;
-    border: 5px solid #3c763d;
+    border: 1px solid #3c763d;
     border-radius: 5px;
     background-color: rgba(67, 194, 50, 0.07);
     box-shadow: 0 2px 15px 0px #aaaaaa;
@@ -1011,7 +1011,7 @@ figure.snip1206.hover figcaption h2 {
 }
 
 .order-menu-card .dishName {
-    color: #02ccba;
+    color: #339432;
     font-family: 'Great Vibes', cursive;
     font-weight: 600;
     font-size: 22px;
@@ -1021,7 +1021,7 @@ figure.snip1206.hover figcaption h2 {
 
 .order-menu-card .price {
     text-align: right;
-    color: #3c763d;
+    color: #339432;
     font-weight: 600;
 }
 
