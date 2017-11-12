@@ -129,8 +129,8 @@ a:hover {
 --------------------------------------------------------------------------*/
 .footer {
     background: #1c262f;
-    color: #d2d2d2;
-    padding: 0 20px 10px 20px;
+    color: #bdbdbd;
+    padding: 0px 20px 10px 20px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -139,18 +139,19 @@ a:hover {
     box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
 }
 
-.footer h3 {
-    color: #E4E4E4;
-    font-size: 1.3em;
-    border-bottom: 1px dotted #525c65;
+.footer h2 {
+    color: #fafbfc;
+    font-size: 1.5em;
 }
 
 .footer ul {
     padding: 0;
+
 }
 
 .footer-navigate-section li {
     line-height: 20px !important;
+
 }
 
 .footer-copyright {
@@ -162,36 +163,17 @@ a:hover {
 }
 
 .block h2 {
-    color: #FFFFFF;
+    color: #bfbfbf;
 }
-
 .address-block li {
     margin-bottom: 20px;
+
 }
 
 .address-block li i {
     margin-right: 15px;
     font-size: 20px;
     width: 20px;
-}
-
-.social-icons {
-    margin-top: 40px;
-}
-
-.social-icons li {
-    display: inline-block;
-    margin: 0 6px;
-}
-
-.social-icons a {
-    display: inline-block;
-}
-
-.social-icons i {
-    color: #FFFFFF;
-    margin-right: 25px;
-    font-size: 25px;
 }
 
 /*--------------------------------------------------------------------------
@@ -426,6 +408,7 @@ Events
     -ms-transform: translateZ(0);
     transform: translateZ(0);
     background: linear-gradient(#007a4b, #15c26b);
+
 }
 
 #events .row {

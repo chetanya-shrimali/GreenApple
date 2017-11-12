@@ -26,6 +26,7 @@
     color: #fafbfc;
 }
 
+
 .item.active:before {
     content: '';
     position: absolute;
@@ -39,8 +40,9 @@
 
 #main-slider .item {
     height: 50vh;
-    background-position: 50%;
-    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     left: 0 !important;
     opacity: 0;
@@ -48,7 +50,6 @@
     position: absolute;
     width: 100%;
     display: block !important;
-
     -webkit-transition: opacity ease-in-out 500ms;
     -moz-transition: opacity ease-in-out 500ms;
     -o-transition: opacity ease-in-out 500ms;
@@ -97,7 +98,7 @@
 }
 
 #main-slider .carousel .item {
-    background-position: 50%;
+    background-position: 0px;%
     background-repeat: no-repeat;
     background-size: cover;
     left: 0 !important;
@@ -223,7 +224,7 @@
     }
 }
 
-/* Portfolio Grid and Hover Effects */
+ /*Portfolio Grid and Hover Effects*/
 
 .grid {
     padding: 20px 20px 100px 20px;
