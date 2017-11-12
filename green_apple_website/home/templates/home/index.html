@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% block title %}{% endblock %}
 {% block body %}
+
 <section id="main-slider" class="no-margin">
   <div class="carousel slide">
     <ol class="carousel-indicators">
@@ -52,24 +53,12 @@
   <a class="next hidden-xs" href="#main-slider" data-slide="next">
     <i class="icon-angle-right"></i>
   </a>
-</section><!--/#main-slider-->
-<!--<section id="main-slider" class="no-margin">-->
-<!--<div class="item active" style="background-image: url(img/slides/1.jpg);background-size: cover;height: 60vh;">-->
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col-sm-4"></div>-->
-<!--<div class="col-sm-4"></div>-->
-<!--<div class="col-sm-4">-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
+</section>
 
 <section id="welcome">
   <div class="container">
     <div class="row">
-      <h3>Welcome </h3>
+      <h2>Welcome </h2>
       <br>
       <h4>
         A Unique place for fine Dining with calm and peace
@@ -86,7 +75,7 @@
 <section id="menu">
   <div class="container">
     <div class="row">
-      <h3>Our Menu</h3>
+      <h2>Our Menu</h2>
       <br>
       <div class="col-sm-1"></div>
       {% for item in menu_items %}
@@ -110,20 +99,22 @@
 <section id="events">
   <div class="container">
     <div class="row">
-      <h3>Our Events</h3>
+      <h2>Our Events</h2>
       <br>
+
       <div class="blog-card alt">
         <div class="photo photo2"></div>
         <div class="description">
-          <h1>Enjoy Christmas !</h1>
-          <p class="summary">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. or sit amet,
-            consectetur adipisicing elit. Ad e
-            or sit amet. Ad e Ad eum
-            dolorum architecto obcaecati enim dicta
-            praeseVeritatis, sit.</p>
+          <h3>Happy New Year !</h3>
+          <p class="summary">Each new day is a blank page in the diary of your life.
+            The secret of success is in turning that diary into the best
+            story you possibly can." I wish you Happy New Year and diary full of best
+            stories ever written in your life.Hope Smiles from the threshold of the year to come,
+            Whispering 'it will be happier' </p>
         </div>
       </div>
+
+      <a href="{% url 'events:events' %}"><h4 style="margin-top: -10px;font-weight: 600;">SEE MORE</h4></a>
     </div>
   </div>
 </section>
