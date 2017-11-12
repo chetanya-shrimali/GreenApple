@@ -81,17 +81,10 @@ div[class*="span"] {
 	Typography Style
 --------------------------------------------------------------------------*/
 body {
-<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 20px;
     color: #2e3d49;
-=======
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #2e3d49;
->>>>>>> Sub-menu template template added.
 }
 
 h1 {
@@ -135,7 +128,6 @@ a:hover {
 	Footer Style
 --------------------------------------------------------------------------*/
 .footer {
-<<<<<<< HEAD
     background: #1c262f;
     color: #d2d2d2;
     padding: 0 20px 10px 20px;
@@ -145,17 +137,6 @@ a:hover {
     -webkit-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
     box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
-=======
-  background:#1c262f;
-  color: #d2d2d2;
-  padding: 0 20px 10px 20px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
-  box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
->>>>>>> Sub-menu template template added.
 }
 
 .footer h3 {
@@ -642,16 +623,19 @@ Contact us
 .contact-group .welcome h3 {
     text-align: center;
     font-size: 24px;
-    color: #105b7b;
+    color: #15c26b;
+    margin-top: -20px;
 
 }
+
+
 
 /***************************************************
 Image background
  **************************************************/
 
 #image-back img {
-    height: 40vh;
+    height: 35vh;
     width: 100%;
     background-color: #2e3d49;
     opacity: 0.7;
@@ -783,7 +767,6 @@ select:-webkit-autofill {
 }
 
 .quotation::after {
-<<<<<<< HEAD
     content: close-quote;
     display: inline;
     height: 0;
@@ -851,89 +834,15 @@ select:-webkit-autofill {
     font-weight: 200;
     font-size: 26px;
     letter-spacing: 1px;
-=======
-  content: close-quote;
-  display: inline;
-  height: 0;
-  line-height: 0;
-  left: 10px;
-  position: relative;
-  top: 35px;
-  color: #2e3d49;
-  font-size: 2em;
-}
-
-#sub-menu{
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  margin-top: 90px;
-  position: relative;
-}
-
-
-#sub-menu .row .col-md-3 {
-  padding-left: 0;
-}
-.menu-bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #eceff1;
-  position: absolute;
-  min-height: 100vh;
-  overflow: auto;
-}
-
-.menu-bar li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.menu-bar li a.active {
-  background-color: #15c26b;
-  color: white;
-}
-
-.menu-bar li a:hover:not(.active) {
-  background-color: #92989b;
-  color: white;
-}
-
-.secTitle {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3em;
-  font-weight: 500;
-  color: #fafbfc;
-  letter-spacing: 1px;
-}
-
-.dishName {
-  color: #15c26b;
-  font-family: 'Great Vibes', cursive;
-  font-weight: 200;
-  font-size: 26px;
-  letter-spacing: 1px;
->>>>>>> Sub-menu template template added.
 
 }
 
 .price {
-<<<<<<< HEAD
     text-align: left;
-=======
-  text-align: left;
->>>>>>> Sub-menu template template added.
     color: #15c26b;
 }
 
 .sub-menu-card {
-<<<<<<< HEAD
     margin: 50px 20px;
 
     -webkit-box-shadow: 5px 5px 5px 0px rgba(238, 238, 238, 0.75);
@@ -951,30 +860,10 @@ select:-webkit-autofill {
 
 .thumb {
     margin: 50px 20px;
-=======
-  margin: 50px 20px;
-
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(238,238,238,0.75);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(238,238,238,0.75);
-  box-shadow: 5px 5px 5px 0px rgba(238,238,238,0.75);
-}
-
-.sub-menu-card .table td{
-  border-top: 0px solid #eeeeee;
-}
-
-#sub-menu .container{
-  min-height: 100vh;
-}
-
-.thumb{
-  margin: 50px 20px;
->>>>>>> Sub-menu template template added.
 
 }
 
 .thumb-item {
-<<<<<<< HEAD
     -webkit-box-shadow: 0px 0px 5px 0px rgba(238, 238, 238, 0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(238, 238, 238, 0.75);
     box-shadow: 0px 0px 5px 0px rgba(238, 238, 238, 0.75);
@@ -1112,42 +1001,4 @@ figure.snip1206.hover figcaption h2 {
 #main-menu .row {
     margin-left: 5%;
     margin-right: 5%;
-=======
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(238,238,238,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(238,238,238,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(238,238,238,0.75);
-  border: 1px solid rgba(238,238,238,0.75);
-  height:40px;
-  margin: 10px;
-
-}
-
-
-.thumb-item.even h3{
-  text-align: left;
-  margin: 7px;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  color: #fafbfc;
-  font-size:18px;
-}
-
-.thumb-item.odd h3{
-  text-align: left;
-  margin: 7px;
-  font-family: 'Open Sans', sans-serif;
-  color: #15c26b;
-  text-transform: uppercase;
-  font-size:18px;
-}
-
-.thumb-item.even{
-  background: linear-gradient(#007a4b,#15c26b);
-
-}
-
-.thumb-item.odd{
-  background: linear-gradient(#eeeeee,#fafbfc);
-
->>>>>>> Sub-menu template template added.
 }
