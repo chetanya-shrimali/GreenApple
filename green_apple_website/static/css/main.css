@@ -775,34 +775,6 @@ select:-webkit-autofill {
     padding-left: 0;
 }
 
-.menu-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: #eceff1;
-    position: absolute;
-    min-height: 100vh;
-    overflow: auto;
-}
-
-.menu-bar li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.menu-bar li a.active {
-    background-color: #15c26b;
-    color: white;
-}
-
-.menu-bar li a:hover:not(.active) {
-    background-color: #92989b;
-    color: white;
-}
-
 .secTitle {
     font-family: 'Great Vibes', cursive;
     font-size: 3em;
@@ -984,4 +956,91 @@ figure.snip1206.hover figcaption h2 {
 #main-menu .row {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+#order {
+    margin-bottom: 50px;
+    text-align: center;
+}
+#order h2{
+    margin-top: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #02b3e4;
+}
+#order h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #02b3e4;
+}
+
+.ver-nav{
+    border-right: 1px solid #aaaaaa;
+    min-height: 100vh;
+}
+.ver-nav h4{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color:#2e3d49 ;
+}
+.myOrder{
+   border-left: 1px solid #aaaaaa;
+    height: 100vh;
+}
+
+.order-menu-card {
+    margin: 40px 30px;
+    padding: 20px;
+    border: 5px solid #3c763d;
+    border-radius: 5px;
+    background-color: rgba(67, 194, 50, 0.07);
+    box-shadow: 0 2px 15px 0px #aaaaaa;
+}
+
+.order-menu-card .table td {
+    border:none;
+}
+
+.order-menu-card .secTitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    font-weight: 600;
+    color: #2e3d49;
+    letter-spacing: 1px;
+}
+
+.order-menu-card .dishName {
+    color: #02ccba;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+}
+
+.order-menu-card .price {
+    text-align: right;
+    color: #3c763d;
+    font-weight: 600;
+}
+
+.order-menu-card .add {
+    text-align: right;
+    color: #f9f2f4;
+}
+
+#order .btn{
+    background-color: #2e3d49;
+}
+#order .btn:hover{
+    background-color: #ac2925;
+}
+
+.cart{
+    min-height: 35vh;
+}
+
+#order hr{
+    border: 0.5px solid #aaaaaa;
 }
