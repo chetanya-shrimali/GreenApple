@@ -432,7 +432,7 @@ Events
 .blog-card {
     transition: height 0.3s ease;
     -webkit-transition: height 0.3s ease;
-    background: #fff;
+    background-color: rgba(170, 170, 170, 0.39);
     border-radius: 3px;
     box-shadow: 1px 4px 7px 2px rgba(132, 132, 132, 0.3);
     margin: 0 auto 1.6%;
@@ -478,7 +478,7 @@ Events
     -webkit-transition: all 0.3s ease;
     background: rgba(0, 0, 0, 0.6);
     box-sizing: border-box;
-    color: #fff;
+    color: #fafbfc;
     font-family: "Open Sans", sans-serif;
     list-style: none;
     margin: 0;
@@ -569,7 +569,7 @@ Events
         -webkit-transform: skewX(-5deg);
         transform: skewX(-5deg);
         content: "";
-        background: #fff;
+        background: #fafbfc;
         width: 100%;
         z-index: -1;
         /*POSITION*/
