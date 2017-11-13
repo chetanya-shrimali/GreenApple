@@ -1,4 +1,136 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
+{% load staticfiles %}
 {% block body %}
+    <section id="image-back" class="no-margin" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+    <div class="row" style="margin: auto;">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <img src="{% static 'img/back1.jpg' %}"/>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+</section>
+<section id="order">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="ver-nav">
+               <h3>CATEGORY</h3><hr>
+                <div class="categ">
+                    <h4>Paneer</h4>
+                    <h4>Pehli Pasand</h4>
+                    <h4>Dessert</h4>
+                    <h4>cat1</h4>
+                    <h4>cat1</h4>
+                     <h4>cat1</h4>
+                     <h4>cat1</h4>
+                    <h4>cat1</h4>
+                    <h4>cat1</h4>
+                    <h4>cat1</h4>
+                    <h4>cat1</h4>
+                    <h4>cat1</h4>
+                     <h4>cat1</h4>
+                     <h4>cat1</h4>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+
+            <h2>OUR MENU</h2>
+            <p>We present you our range of hot and sizzling dishes by our chefs.</p>
+                    <div class="order-menu-card">
+                    <div class="table-flexible">
+                        <table class="table borderless">
+                            <tbody>
+                            <tr>
+                                <td colspan="3" class="text-center">
+                                    <span class="secTitle">Pehli Pasand (Appetiser) </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tandoori</span>
+                                </td>
+                                <td class="price">7</td>
+                                <td class="add"><button type="button" class="btn  btn-sm"> Add</button></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                                <td class="add"><button type="button" class="btn  btn-sm"> Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                                <td class="add"><button type="button" class="btn btn-sm"> Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                                <td class="add"><button type="button" class="btn  btn-sm"> Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                                <td class="add"><button type="button" class="btn btn-sm"> Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                                <td class="add"><button type="button" class="btn btn-sm"> Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                                <td class="add"><button type="button" class="btn  btn-sm"> Add</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+            </div>
+        <div class="col-sm-3" >
+            <div class="myOrder">
+               <h3>MY ORDER</h3><hr>
+                <div class="row">
+                    <div class="cart">
+                      <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
+                        <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
+                        <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
+                    </div>
+                    <div class="total">
+                        <hr style="margin: 0 30px;">
+                        <h4>Sub Total:</h4>
+                    </div>
+
+                    <button type="button" class="btn  btn-lg"style="margin: 10px 40px; padding: 7px 40px;"> CONTINUE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 {% endblock %}

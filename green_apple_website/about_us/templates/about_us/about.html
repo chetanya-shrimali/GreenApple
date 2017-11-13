@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
+{% load staticfiles %}
 {% block body %}
     <section id="image-back" class="no-margin">
-        <div class="item active">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                </div>
-                <div class="col-md-2"></div>
-            </div>
+
+    <div class="row" style="margin: auto;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="{% static 'img/back1.jpg' %}"/>
         </div>
-    </section>
+        <div class="col-md-2"></div>
+    </div>
+
+</section>
     <!-- About us-->
 
     <section id="about" class="section">
@@ -20,7 +22,7 @@
             <div class="row" style="margin: auto">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <h3>ABOUT US</h3>
+                    <h2 style="margin-top: 10px;" >ABOUT US</h2>
                     <hr>
                     <br><br>
                     <p>
