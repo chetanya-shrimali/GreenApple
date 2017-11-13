@@ -59,27 +59,31 @@
   </div>
 </section>
 
-<section id="menu">
+<section id="menu" style="background-color: #fafbfc;">
   <div class="container">
-    <div class="row">
+    <div class="row" style="background-color: #fafbfc;">
       <h2>Our Menu</h2>
       <br>
       <div class="col-sm-1"></div>
       {% for item in menu_items %}
       <div class="col-sm-2">
+      {% if item.id < 6 %}
         <div class=" menu-item">
           <a href="{% url 'menu:sub_menu' item.id %}">
             <img src="{{ item.category_image.url }}" height="100px"
                  width="100px"></a><br>
-          {{ item.category_name }}
         </div>
+      {% endif %}
+
+
       </div>
       {% endfor %}
-      <div class="col-sm-1"></div>
+      <div class="col-sm-1"><a href="{% url 'menu:menu' %}"><h4 style="margin-top: 70px;font-weight: 800;
+      background-color: #02b3e4;height: 40px;width:40px;">
+          <i style="margin-top: 10px; color: #ffffff;" class="fa fa-angle-right"></i></h4></a></div>
       <br>
-      <div class="float-right"><a href="{% url 'menu:menu' %}"
-                                  style="color: #3c763d">SEE MORE</a></div>
     </div>
+
   </div>
 </section>
 

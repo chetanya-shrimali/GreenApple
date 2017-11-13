@@ -385,17 +385,17 @@ Menu home
 }
 
 .menu-item {
-    border: 2px solid #525c65;
-    border-radius: 50%;
+    border: 1px solid #4cae4c;
     height: 128px;
     width: 128px;
-    padding: 30px;
+    padding: 12px;
+    background-color: #eeeeee;
     margin: 30px 0px 70px 0px;
 }
 
 .menu-item:hover {
-    border: 2px solid #393939;
-    background-color: #eeeeee;
+
+    box-shadow: 0 2px 10px 0 #aaaaaa;
 }
 
 /***************************************************
