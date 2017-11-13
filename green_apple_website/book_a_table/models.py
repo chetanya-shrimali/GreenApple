@@ -1,11 +1,18 @@
 from django.db import models
 
 
-class BookDetail(models.Model):
-    number_of_persons = (('1', 1), ('2', 2), ('3', 3), ('4', 4), ('5', 5))
+# from phonenumber_field.modelfields import PhoneNumberField
 
-    customer = models.ForeignKey('order.Customer', on_delete=models.CASCADE)
-    total_persons = models.CharField(max_length=4, choices=number_of_persons,
-                                     default='1')
-    date = models.DateField(null=False)
+
+class BookDetail(models.Model):
+    # number_of_persons = (('1', 1), ('2', 2), ('3', 3), ('4', 4), ('5', 5))
+
+    customer = models.CharField(max_length=50)
+    contact = models.IntegerField()
+    email = models.EmailField(max_length=50, null=True)
+    total_persons = models.CharField(max_length=4)
+    date = models.DateField()
     time = models.TimeField()
+
+    def __str__(self):
+        return self.customer

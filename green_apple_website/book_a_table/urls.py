@@ -4,5 +4,5 @@ from django.conf.urls import url
 app_name = 'book_a_table'
 
 urlpatterns = [
-    url(r'^$', views.BookFormView.as_view(), name='book'),
+    url(r'^$', views.book_table, name='book'),
 ]

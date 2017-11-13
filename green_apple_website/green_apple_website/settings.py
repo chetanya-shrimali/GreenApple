@@ -42,8 +42,12 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
+    'phonenumber_field',
 
 ]
+
+PHONENUMBER_DEFAULT_REGION = 'IN'
+TIME_ZONE = 'Asia/Calcutta'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

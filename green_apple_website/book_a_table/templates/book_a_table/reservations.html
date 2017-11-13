@@ -2,86 +2,106 @@
 {% block title %}{% endblock %}
 {% load staticfiles %}
 {% block body %}
-<section id="image-back" class="no-margin">
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <img src="{% static 'img/back1.jpg' %}"/>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
-
-</section>
-<!-- Reservations-->
-
-<section id="reservation" class="section">
-    <div class="container">
+    <section id="image-back" class="no-margin">
 
         <div class="row">
-
-            <div class="col-sm-6" style="text-align: center;">
-                <p class="quotation"> Time has a wonderful way of showing us what matters.</p>
-                <h3>Book online or call us on 020 3375 1515 between 10:00 AM - 9:00 PM.</h3>
-                   <h3> We will send you confirmation as soon as we can.</h3>
-                <h3><b>Opening Hours:</b></h3>
-                <h3>Lunch : 11:00 AM - 3:30 PM</h3>
-                <h3>Dinner : 6:30 AM - 10:30 PM</h3>
-
-
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <img src="{% static 'img/back1.jpg' %}"/>
             </div>
-            <div class="col-sm-6 login-box">
-                <div class="login-container-wrapper">
-                    <div class="logo">
-                        <h4>Book a Table &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i></h4>
-                    </div>
-                    <!--<div class="welcome">-->
-                        <!---->
-                    <!--</div>-->
+            <div class="col-md-2"></div>
+        </div>
 
-                    <form class="form-horizontal login-form" action="#" method="post">
-                        <div class="form-group relative">
-                            <input id="name" name="name" class="form-control input" type="text" placeholder="Name" required>
-                            <i class="fa fa-user"></i>
+    </section>
+    <!-- Reservations-->
+
+    <section id="reservation" class="section">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-6" style="text-align: center;">
+                    <p class="quotation"> Time has a wonderful way of showing us what matters.</p>
+                    <h3>Book online or call us on 020 3375 1515 between 10:00 AM - 9:00 PM.</h3>
+                    <h3> We will send you confirmation as soon as we can.</h3>
+                    <h3><b>Opening Hours:</b></h3>
+                    <h3>Lunch : 11:00 AM - 3:30 PM</h3>
+                    <h3>Dinner : 6:30 AM - 10:30 PM</h3>
+
+
+                </div>
+                <div class="col-sm-6 login-box">
+                    <div class="login-container-wrapper">
+                        <div class="logo">
+                            <h4>Book a Table &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i></h4>
                         </div>
-                        <div class="form-group relative">
-                            <input id="contact" name="contact" class="form-control input" type="tel" placeholder="Contact" required>
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="form-group relative">
-                            <input id="noOfPersons" name="noOfPersons" class="form-control input" type="number" placeholder="No of Persons" required>
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="form-group relative">
-                            <input id="date" name="date" class="form-control input" type="date" required>
-                            <i class="fa fa-calender"></i>
-                        </div>
-                        <div class="form-group relative">
-                            <input id="time" name="time" class="form-control input" type="time" required>
-                            <i class="fa fa-clock-o"></i>
-                        </div>
-                        <div class="form-group">
-                            <input name="submit" type="submit" value="Book Now !" class="btn btn-green btn-lg btn-block">
-                        </div>
-                    </form>
+                        <!--<div class="welcome">-->
+                        <!---->
+                        <!--</div>-->
+
+                        <form class="form-horizontal login-form" id="book_form" method="post">
+                            {% csrf_token %}
+                            <div class="form-group relative">
+                                <input id="{{ book_form.customer1 }}" name="customer" class="form-control input"
+                                       type="text" placeholder="Name" required>
+                                <i class="fa fa-user"></i>
+                            </div>
+
+                            <div class="form-group relative">
+                                <input id="{{ book_form.contact1 }}" name="contact" class="form-control input"
+                                       type="text" placeholder="contact" required>
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="form-group relative">
+                                <input id="{{ book_form.email1 }}" name="email" class="form-control input" type="email"
+                                       placeholder="Email" required>
+                                <i class="fa fa-mail"></i>
+                            </div>
+                            <div class="form-group relative">
+                                <select id="{{ book_form.total_persons1 }}" name="total_persons"
+                                        class="form-control input" required>
+                                    <option value="">no of persons</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="form-group relative">
+                                <input id="{{ book_form.date1 }}" name="date" class="form-control input"
+                                       placeholder="MM/DD/YYYY" type="date" required>
+                                <i class="fa fa-calender"></i>
+                            </div>
+                            <div class="form-group relative">
+                                <input id="{{ book_form.time1 }}" name="time" class="form-control input"
+                                       placeholder="HH:MM" type="time" required>
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div class="form-group">
+                                <input name="submit" type="submit" value="send" class="btn btn-green btn-lg btn-block">
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
 
+            </div>
         </div>
-
-    </div>
-    </div>
-</section>
+    </section>
 
     <br><br><br><br>
-<form class="form-horizontal" action="" method="post"
-      enctype="multipart/form-data">
-    {% csrf_token %}
-    {% include 'book_a_table/form_registration.html' %}
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-    </div>
-</form>
+    {#<form class="form-horizontal" action="" method="post"#}
+    {#      enctype="multipart/form-data">#}
+    {#    {% csrf_token %}#}
+    {#    {% include 'book_a_table/form_registration.html' %}#}
+    {#    <div class="form-group">#}
+    {#        <div class="col-sm-offset-2 col-sm-10">#}
+    {#            <button type="submit" class="btn btn-success">Submit</button>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#</form>#}
 
 {% endblock %}
