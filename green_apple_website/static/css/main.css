@@ -962,6 +962,11 @@ figure.snip1206.hover figcaption h2 {
     margin-bottom: 50px;
     text-align: center;
 }
+
+#order .row{
+    margin: 0 4%;
+}
+
 #order h2{
     margin-top: 30px;
     font-size: 24px;
@@ -983,14 +988,15 @@ figure.snip1206.hover figcaption h2 {
     font-size: 1.2em;
     font-weight: 400;
     color:#2e3d49 ;
+    text-align: start;
 }
-.myOrder{
+#order .myOrder{
    border-left: 1px solid #aaaaaa;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .order-menu-card {
-    margin: 40px 30px;
+    margin: 40px 40px;
     padding: 20px;
     border: 1px solid #3c763d;
     border-radius: 5px;
@@ -1043,4 +1049,8 @@ figure.snip1206.hover figcaption h2 {
 
 #order hr{
     border: 0.5px solid #aaaaaa;
+}
+
+.order-type{
+    min-height: 100vh;
 }
