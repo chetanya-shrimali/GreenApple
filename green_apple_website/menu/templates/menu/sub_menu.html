@@ -1,9 +1,140 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
-{% block body %}
-<br><br>
-{% for sub_menu in all_sub_menu %}
-<h2>{{ sub_menu.dish_name }}</h2>
-<p>{{ sub_menu.price }}</p>
-{% endfor %}
+{% load staticfiles %}
+{% block body%}
+
+
+
+    <section id="sub-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumb">
+                <div class="row">
+                    <div class="thumb-item even">
+                        <h3>Paneer</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Dessert</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pizza</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item even">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+                    <div class="thumb-item odd">
+                        <h3>Pehli Pasand</h3>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="sub-menu-card" style="background-image: url('../../../static/img/menu/back.jpg');">
+                    <div class="table-flexible">
+                        <table class="table borderless">
+                            <tbody>
+                            <tr>
+                                <td colspan="3" class="text-center">
+                                    <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tandoori</span>
+                                </td>
+                                <td class="price">7</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Toofani</span>
+
+                                </td>
+                                <td class="price">6</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="dishName">Paneer Tikka Masala</span>
+                                </td>
+                                <td class="price">9</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+            </div>
+        </div>
+</section>
+
+{#{% for sub_menu in all_sub_menu %}#}
+{#<h2>{{ sub_menu.dish_name }}</h2>#}
+{#<p>{{ sub_menu.price }}</p>#}
+{#{% endfor %}#}
 {% endblock %}

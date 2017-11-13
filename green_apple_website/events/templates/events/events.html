@@ -1,6 +1,62 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
+{% load staticfiles %}
 {% block body %}
+<section id="image-back" class="no-margin">
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="{% static 'img/back1.jpg' %}"/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</section>
+
+    <section id="events-page" class="section">
+  <div class="container">
+
+    <div class="row">
+<h2 style="margin-top:0px; ">Our Events</h2>
+      <hr>
+      <div class="blog-card alt">
+        <div class="photo photo1"></div>
+        <div class="description">
+          <h3>Happy New Year !</h3>
+          <p class="summary">Each new day is a blank page in the diary of your life.
+            The secret of success is in turning that diary into the best
+            story you possibly can." I wish you Happy New Year and diary full of best
+            stories ever written in your life.Hope Smiles from the threshold of the year to come,
+            Whispering 'it will be happier' </p>
+        </div>
+      </div>
+        <div class="blog-card">
+        <div class="photo photo2"></div>
+        <div class="description">
+          <h3>Happy New Year !</h3>
+          <p class="summary">Each new day is a blank page in the diary of your life.
+            The secret of success is in turning that diary into the best
+            story you possibly can." I wish you Happy New Year and diary full of best
+            stories ever written in your life.Hope Smiles from the threshold of the year to come,
+            Whispering 'it will be happier' </p>
+        </div>
+      </div>
+        <div class="blog-card alt">
+        <div class="photo photo1"></div>
+        <div class="description">
+          <h3>Happy New Year !</h3>
+          <p class="summary">Each new day is a blank page in the diary of your life.
+            The secret of success is in turning that diary into the best
+            story you possibly can." I wish you Happy New Year and diary full of best
+            stories ever written in your life.Hope Smiles from the threshold of the year to come,
+            Whispering 'it will be happier' </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <br><br><br>
 {% for event in all_events %}
 <h2>{{ event.title }}</h2>
