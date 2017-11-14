@@ -1,7 +1,26 @@
-.navbar-default {
+.navbar {
     background-color: #1c262f;
-    border-color: #fafbfc;
 }
+.navbar .icon-bar {
+    background-color: #fafbfc;
+}
+.navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+    color: #fafbfc;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        font-family: 'Open Sans', sans-serif;
+        color: #fafbfc;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+}
+
+
 
 @media (min-width: 767px) {
     .navbar {
@@ -25,109 +44,63 @@
     background-color: #2e3d49;
     color: #fafbfc;
 }
+/*--------------------------------------------------------------------------
+	Footer Style
+--------------------------------------------------------------------------*/
+.footer {
+    background: #1c262f;
+    color: #bdbdbd;
+    margin-top: -20px;
+    padding: 0px 20px 10px 20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+}
 
-/* Section Title */
-.section-title h1 {
-    font-size: 42px;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+.footer h2 {
+    color: #fafbfc;
+    font-size: 1.5em;
+}
+
+.footer ul {
+    padding: 0;
+
+}
+
+.footer-navigate-section li {
+    line-height: 20px !important;
+
+}
+
+.footer-copyright {
     text-align: center;
+    color: #cbcbcb;
+    border-top: 1px groove #525c65;
+    padding-top: 10px;
+    font-size: 0.9em;
 }
 
-@media (max-width: 767px) {
-    .section-title h1 {
-        font-size: 32px;
-        text-transform: uppercase;
-        font-weight: 100;
-        letter-spacing: 2px;
-        text-align: center;
-        margin-left: 30px;
-    }
+.block h2 {
+    color: #bfbfbf;
 }
 
+.address-block li {
+    margin-bottom: 20px;
 
-.cs-style-3 figure {
-    overflow: hidden;
 }
 
-.cs-style-3 figure img {
-    -webkit-transition: -webkit-transform 0.4s;
-    -moz-transition: -moz-transform 0.4s;
-    transition: transform 0.4s;
+.address-block li i {
+    margin-right: 15px;
+    font-size: 20px;
+    width: 20px;
 }
 
-.no-touch .cs-style-3 figure:hover img,
-.cs-style-3 figure.cs-hover img {
-    -webkit-transform: translateY(-50px);
-    -moz-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    transform: translateY(-50px);
-}
-
-.cs-style-3 figcaption {
-    height: 80px;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-    transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
-    transition: transform 0.4s, opacity 0.1s;
-}
-
-.cs-style-3 figcaption a {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-/* Caption Style 2 */
-.cs-style-2 figure img {
-    z-index: 10;
-    -webkit-transition: -webkit-transform 0.4s;
-    -moz-transition: -moz-transform 0.4s;
-    transition: transform 0.4s;
-}
-
-.no-touch .cs-style-2 figure:hover img,
-.cs-style-2 figure.cs-hover img {
-    -webkit-transform: translateY(-90px);
-    -moz-transform: translateY(-90px);
-    -ms-transform: translateY(-90px);
-    transform: translateY(-90px);
-}
-
-.cs-style-2 figcaption {
-    height: 90px;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-}
-
-.cs-style-2 figcaption a {
-    position: absolute;
-    right: 20px;
-    top: 30px;
-}
-
+/*******************************
+Background-Image header
+ ********************************/
 .image-style {
     content: '';
     position: absolute;
