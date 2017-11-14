@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^home/', include('home.urls')),
     url(r'^menu/', include('menu.urls')),
     url(r'^order/', include('order.urls')),
-    url(r'^drop_a_note/', include('drop_a_note.urls'))
+    url(r'^drop_a_note/', include('drop_a_note.urls')),
+    # url(r'/', )
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
