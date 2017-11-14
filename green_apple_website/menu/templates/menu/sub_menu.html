@@ -1,140 +1,129 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
 {% load staticfiles %}
-{% block body%}
+{% block body %}
 
 
 
-    <section id="sub-menu">
+  <section id="sub-menu">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumb">
-                <div class="row">
-                    <div class="thumb-item even">
-                        <h3>Paneer</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Dessert</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pizza</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item even">
-                        <h3>Pehli Pasand</h3>
-                    </div>
-                    <div class="thumb-item odd">
-                        <h3>Pehli Pasand</h3>
-                    </div>
+      <div class="row">
+        <div class="col-md-4" >
+          <ul class="nav nav-pills nav-stacked" >
+            <li class="active" style="color: #1c262f"><a data-toggle="pill"
+                                  href="#home">Home</a>
+            </li>
 
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-8">
-                <div class="sub-menu-card" style="background-image: url('../../../static/img/menu/back.jpg');">
-                    <div class="table-flexible">
-                        <table class="table borderless">
-                            <tbody>
-                            <tr>
-                                <td colspan="3" class="text-center">
-                                    <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Tandoori</span>
-                                </td>
-                                <td class="price">7</td>
-
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Toofani</span>
-
-                                </td>
-                                <td class="price">6</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Tikka Masala</span>
-                                </td>
-                                <td class="price">9</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Toofani</span>
-
-                                </td>
-                                <td class="price">6</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Tikka Masala</span>
-                                </td>
-                                <td class="price">9</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Toofani</span>
-
-                                </td>
-                                <td class="price">6</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="dishName">Paneer Tikka Masala</span>
-                                </td>
-                                <td class="price">9</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-
-
-            </div>
+            <li><a data-toggle="pill"
+                   href="#paneer" style="color: #1c262f" >Paneer</a>
+            </li>
+          </ul>
         </div>
-</section>
 
-{#{% for sub_menu in all_sub_menu %}#}
-{#<h2>{{ sub_menu.dish_name }}</h2>#}
-{#<p>{{ sub_menu.price }}</p>#}
-{#{% endfor %}#}
+        <div class="col-md-8">
+          <div class="sub-menu-card"
+               style="background-image: url('../../../static/img/menu/back.jpg');">
+            <div class="table-flexible">
+              <table class="table borderless">
+                <tbody>
+                <tr>
+                  <td colspan="3" class="text-center">
+                    <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="dishName">Paneer Tikka Masala</span>
+                  </td>
+                  <td class="price">9</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a data-toggle="pill"
+                                href="#home">Home</a>
+          </li>
+          {% for nutrient in nutrients %}
+            <li><a data-toggle="pill"
+                   href="#{{ nutrient.id }}">{{ nutrient.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-9">
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>People look at food labels for different reasons. But
+              whatever the reason,
+              many consumers would like to know how to use this
+              information more effectively
+              and easily. The following label-building skills are
+              intended to
+              make it easier for you to use nutrition labels to make
+              quick, informed food choices that contribute to a healthy
+              diet..</p>
+          </div>
+          {% for nutrient in nutrients %}
+            <div id="{{ nutrient.id }}" class="tab-pane fade">
+              <div class="text-center "><h3>{{ nutrient.name }}</h3>
+              </div>
+              <div class="row">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Avg Intake</th>
+                    <th>Disease</th>
+                    <th>Food</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  <tr>
+                    <td>{{ nutrient.avg_intake }}</td>
+                    <td>
+                      {% for disease in diseases %}
+                        {% if disease.nutrient == nutrient %}
+                          {{ disease.name }}
+                        {% endif %}
+                      {% endfor %}
+                    </td>
+                    <td>
+                      {% for food in foods %}
+                        {% for nu in food.nutrient.all %}
+                          {% if nu == nutrient %}
+                            {{ food.name }}
+                          {% endif %}
+                        {% endfor %}
+                      {% endfor %}
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="clearfix visible-lg"></div>
+    </div>
+  </div>
+
+  {#{% for sub_menu in all_sub_menu %}#}
+  {#<h2>{{ sub_menu.dish_name }}</h2>#}
+  {#<p>{{ sub_menu.price }}</p>#}
+  {#{% endfor %}#}
 {% endblock %}
