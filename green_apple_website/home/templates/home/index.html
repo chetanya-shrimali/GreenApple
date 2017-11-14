@@ -3,111 +3,108 @@
 {% block title %}{% endblock %}
 {% block body %}
 
+    <div class="main-slider">
+        <div class="container-fluid">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
 
-    <div class="container-fluid " style="padding: 50px 0 0 0">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{% static 'img/slides/2.jpg' %}" style="width:100%;max-height: 60vh;">
+                    </div>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="{% static 'img/slides/2.jpg' %}" style="width:100%;max-height: 60vh;">
-      </div>
+                    <div class="item">
+                        <img src="{% static 'img/slides/1.jpg' %}" style="width:100%;max-height: 60vh;">
+                    </div>
 
-      <div class="item">
-        <img src="{% static 'img/slides/1.jpg' %}" style="width:100%;max-height: 60vh;">
-      </div>
+                    <div class="item">
+                        <img src="{% static 'img/slides/3.jpg' %}" style="width:100%;max-height: 60vh;">
+                    </div>
+                </div>
 
-      <div class="item">
-        <img src="{% static 'img/slides/3.jpg' %}" style="width:100%;max-height: 60vh;">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-
-
-<section id="welcome">
-  <div class="container">
-    <div class="row">
-      <h2>Welcome </h2>
-      <br>
-      <h4>
-        A Unique place for fine Dining with calm and peace
-        naturally.
-        Architectured and beautifully designed with modern are and
-        comforts
-        with its ambience and all kinds of amenities.<br>Make those
-        moments your memories to cherish. </h4>
-      <br><br>
-    </div>
-  </div>
-</section>
-
-<section id="menu" style="background-color: #fafbfc;">
-  <div class="container">
-    <div class="row" style="background-color: #fafbfc;">
-      <h2>Our Menu</h2>
-      <br>
-      <div class="col-sm-1"></div>
-      {% for item in menu_items %}
-      <div class="col-sm-2">
-      {% if item.id < 6 %}
-        <div class=" menu-item">
-          <a href="{% url 'menu:sub_menu' item.id %}">
-            <img src="{{ item.category_image.url }}" height="100px"
-                 width="100px"></a><br>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-      {% endif %}
+    </div>
+    <section id="welcome" class="section">
+        <div class="container">
+            <div class="row">
+                <h2>Welcome </h2>
+                <br>
+                <h4>
+                    A Unique place for fine Dining with calm and peace
+                    naturally.
+                    Architectured and beautifully designed with modern are and
+                    comforts
+                    with its ambience and all kinds of amenities.<br>Make those
+                    moments your memories to cherish. </h4>
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="row">
+                <h2>Our Menu</h2>
+                <br>
+                <div class="col-md-1 col-sm-12"></div>
+                {% for item in menu_items %}
+                    <div class="col-md-2 col-sm-12">
+                        {% if item.id < 6 %}
+                            <div class=" menu-item">
+                                <a href="{% url 'menu:sub_menu' item.id %}">
+                                    <img src="{{ item.category_image.url }}"></a><br>
+                            </div>
+                        {% endif %}
 
 
-      </div>
-      {% endfor %}
-      <div class="col-sm-1"><a href="{% url 'menu:menu' %}"><h4 style="margin-top: 70px;font-weight: 800;
+                    </div>
+                {% endfor %}
+                <div class="col-md-1 col-sm-12"><a href="{% url 'menu:menu' %}"><h4 style="margin-top: 70px;font-weight: 800;
       background-color: #02b3e4;height: 40px;width:40px;">
-          <i style="margin-top: 10px; color: #ffffff;" class="fa fa-angle-right"></i></h4></a></div>
-      <br>
-    </div>
+                    <i style="margin-top: 10px; color: #ffffff;" class="fa fa-angle-right"></i></h4></a></div>
+                <br>
+            </div>
 
-  </div>
-</section>
-
-<section id="events">
-  <div class="container">
-    <div class="row">
-      <h2>Our Events</h2>
-      <br>
-
-      <div class="blog-card alt">
-        <div class="photo photo2"></div>
-        <div class="description">
-          <h3>Happy New Year !</h3>
-          <p class="summary">Each new day is a blank page in the diary of your life.
-            The secret of success is in turning that diary into the best
-            story you possibly can." I wish you Happy New Year and diary full of best
-            stories ever written in your life.Hope Smiles from the threshold of the year to come,
-            Whispering 'it will be happier' </p>
         </div>
-      </div>
+    </section>
 
-      <a href="{% url 'events:events' %}"><h4 style="margin-top: -10px;font-weight: 600;">SEE MORE</h4></a>
-    </div>
-  </div>
-</section>
+    <section id="events" class="section">
+        <div class="container">
+            <div class="row">
+                <h2>Our Events</h2>
+                <br>
+
+                <div class="blog-card alt">
+                    <div class="photo photo2"></div>
+                    <div class="description">
+                        <h3>Happy New Year !</h3>
+                        <p class="summary">Each new day is a blank page in the diary of your life.
+                            The secret of success is in turning that diary into the best
+                            story you possibly can." I wish you Happy New Year and diary full of best
+                            stories ever written in your life.Hope Smiles from the threshold of the year to come,
+                            Whispering 'it will be happier' </p>
+                    </div>
+                </div>
+
+                <a href="{% url 'events:events' %}"><h4 style="margin-top: -10px;font-weight: 600;">SEE MORE</h4></a>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
