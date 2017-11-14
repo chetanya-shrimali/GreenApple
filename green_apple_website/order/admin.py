@@ -1,7 +1,15 @@
 from django.contrib import admin
 
-from .models import Customer, Order, Dish
+from order.models import Order, Dish
 
-admin.site.register(Customer)
-admin.site.register(Order)
+
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('name', 'address', 'phone_number', 'date', 'message')
+
+
+# class DishAdmin(admin.ModelAdmin):
+#     list_display = ('order', 'name')
+
+
+admin.site.register(Order, OrderAdmin)
 admin.site.register(Dish)
