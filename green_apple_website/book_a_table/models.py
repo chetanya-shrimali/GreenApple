@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 
@@ -5,10 +6,8 @@ from django.db import models
 
 
 class BookDetail(models.Model):
-    # number_of_persons = (('1', 1), ('2', 2), ('3', 3), ('4', 4), ('5', 5))
-
     customer = models.CharField(max_length=50, default="name")
-    contact = models.IntegerField()
+    contact = models.IntegerField(validators=[MinValueValidator(6000000000), MaxValueValidator(9999999999)])
     email = models.EmailField(max_length=50, null=True)
     total_persons = models.CharField(max_length=4)
     date = models.DateField()

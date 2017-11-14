@@ -42,6 +42,7 @@ def book_table(request):
     if request.method == 'POST':
         book_form = BookForm(request.POST)
         if book_form.is_valid():
+
             table = book_form.save()
             table.save()
             return HttpResponseRedirect(reverse('home:index'))
