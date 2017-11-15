@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse, request
 from django.core.urlresolvers import reverse
-from drop_a_note.forms import *
+from drop_a_note.forms import NoteForm
 from django.views.decorators.csrf import csrf_protect
 from django.core.mail import EmailMessage
 from validate_email import validate_email
 from django.contrib import messages
-
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -41,7 +40,7 @@ def contact_us(request):
                                      to=['chetanyashrimalie5@gmail.com',
                                          'nkchoudhary696@gmail.com'])
                 email.send()
-    
+
                 email = EmailMessage('Regarding feedback',
                                      "Hey " + name + ",\n\n" + "We have successfully recieved your note!!",
                                      to=[email_address])
