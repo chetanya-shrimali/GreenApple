@@ -13,15 +13,17 @@
         <ul class="nav nav-pills nav-stacked" style="margin-top: 30px;">
           {% for menu in all_menu %}
           <li><a data-toggle="pill"
-                 href="#{{ menu.id }}" style="text-transform: capitalize">{{
-            menu.category_name }}</a></li>
+                 href="#{{ menu.id }}"
+                 style="text-transform: capitalize">{{ menu.category_name
+            }}</a>
+          </li>
           {% endfor %}
         </ul>
       </div>
 
       <div class="col-md-8">
         <div class="sub-menu-card"
-             style="background-image: url('../../../static/img/menu/back.jpg');">
+             style="background-image: url('{% static 'img/back.jpg' %}');">
           <div class="tab-content">
             {% for menu in all_menu %}
             <div id="{{ menu.id }}"
