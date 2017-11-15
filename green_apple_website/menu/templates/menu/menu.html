@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block body %}
+<br><br>
+<link
+    href="https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);"
+    rel="stylesheet"/>;
+<section id="main-menu" class="section">
+  <div class="container">
+    <div class="row">
+      <h2> OUR MENU</h2>
+
+      {% for menu in all_menu %}
+
+          <figure class="snip0056">
+    <figcaption>
+      <a href="{% url 'menu:sub_menu' menu.pk %}">
+            <h2>{{ menu.category_name }}</h2></a>
+    </figcaption><img src="{{ menu.category_image.url }}" />
+    <div class="position">For More</div>
+  </figure>
+
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endblock %}

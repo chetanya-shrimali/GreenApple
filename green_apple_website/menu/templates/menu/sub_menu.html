@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+
+
+    <section id="sub-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
+                        <li class="active" style="color: #1c262f"><a data-toggle="pill" href="#Paneer">Paneer</a></li>
+                        <li><a data-toggle="pill" href="#starter" style="color: #1c262f">Paneer</a></li>
+                        <li><a data-toggle="pill" href="#dessert" style="color: #1c262f">Paneer</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="sub-menu-card"
+                         style="background-image: url('../../../static/img/menu/back.jpg');">
+                        <div class="tab-content">
+                            <div id="Paneer" class="tab-pane fade in active">
+                                <div class="table-flexible">
+                                    <table class="table borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="3" class="text-center">
+                                                <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="dishName">Paneer Tikka Masala</span>
+                                            </td>
+                                            <td class="price">9</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="starter" class="tab-pane fade in ">
+                                <div class="table-flexible">
+                                    <table class="table borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="3" class="text-center">
+                                                <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="dishName">Paneer Tikka Masala</span>
+                                            </td>
+                                            <td class="price">9</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="dessert" class="tab-pane fade in ">
+                                <div class="table-flexible">
+                                    <table class="table borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="3" class="text-center">
+                                                <span class="secTitle">Pehli Pasand (Appetiser) <hr></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="dishName">Paneer Tikka Masala</span>
+                                            </td>
+                                            <td class="price">9</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </section>
+
+    {#{% for sub_menu in all_sub_menu %}#}
+    {#<h2>{{ sub_menu.dish_name }}</h2>#}
+    {#<p>{{ sub_menu.price }}</p>#}
+    {#{% endfor %}#}
+{% endblock %}

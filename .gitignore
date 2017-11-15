@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# removes .idea folder
+.idea/
+green_apple_website/.idea/

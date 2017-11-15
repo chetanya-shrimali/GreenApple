@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block body %}
+    <section id="image-back" class="no-margin">
+
+    <div class="row" style="margin: auto;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="{% static 'img/back1.jpg' %}"/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</section>
+    <!-- About us-->
+
+    <section id="about" class="section">
+        <div class="container">
+
+
+            <div class="row" style="margin: auto">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h2 style="margin-top: 10px;" >ABOUT US</h2>
+                    <hr>
+                    <br><br>
+                    <p>
+                        A unique place for Fine Dining with calm and peace
+                        naturally. Architectured and beautifully
+                        designed with modern are and comforts with its ambience
+                        and all kinds of amenities.
+                    </p>
+
+                    <p>Beautiful surroundings of outside the restaurant can be
+                        seen clear through.One can really enjoy
+                        the food palate with beautiful panorama.</p>
+                    <p>
+                        Our modern kitchens developed by the culinary art with
+                        care and expertise,and traditional forms of
+                        cooking along with choice of delicious,starter,main
+                        course and desserts.
+                    </p>
+                    <p>
+                        Make those moments your memories to cherish.
+                    </p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
