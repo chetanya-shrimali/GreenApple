@@ -5,7 +5,7 @@ from django.urls import reverse
 
 from order.models import Dish, Order
 from menu.models import SubMenu
-from order.forms import *
+from order.forms import Order, HomeForm, PickUpForm
 
 
 def order(request):
