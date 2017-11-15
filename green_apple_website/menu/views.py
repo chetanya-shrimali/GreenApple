@@ -10,6 +10,7 @@ def menu(request):
 
 def sub_menu(request, pk):
     all_sub_menu = SubMenu.objects.filter(menu=pk)
+    all_menu = Menu.objects.all()
     # all_sub_menu = get_object_or_404(SubMenu, pk=pk)
     return render(request, 'menu/sub_menu.html',
-                  {'all_sub_menu': all_sub_menu})
+                  {'all_sub_menu': all_sub_menu, 'all_menu': all_menu})
