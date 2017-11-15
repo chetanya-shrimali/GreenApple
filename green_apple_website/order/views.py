@@ -44,10 +44,10 @@ def add_order(request, pk1, pk2):
     print(dish_price)
     print(dish_name)
     print(order_list.id)
-    #
-    # dish = Dish.objects.create(name=dish_name, price=dish_price)
-    # dish.order.add(Order.objects.get(pk=pk2))
-    # dish.save()
+
+    dish = Dish.objects.create(name=dish_name, price=dish_price)
+    dish.order.add(Order.objects.get(pk=pk2))
+    dish.save()
 
     return redirect('/order/')
 
