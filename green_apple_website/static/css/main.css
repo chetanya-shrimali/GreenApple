@@ -654,30 +654,30 @@ select:-webkit-autofill {
 }
 
 .secTitle {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    font-weight: 500;
+    font-family: 'Vollkorn SC', serif;
+    font-size: 2.6em;
+    font-weight: 200;
     color: #fafbfc;
-    letter-spacing: 1px;
+
 }
 
 .dishName {
     color: #15c26b;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Vollkorn SC', serif;
     font-weight: 200;
-    font-size: 26px;
-    letter-spacing: 1px;
+    font-size: 20px;
+
 
 }
 
 .price {
-    text-align: left;
+    text-align: right;
     color: #15c26b;
 }
 
 .sub-menu-card {
     margin: 30px 20px;
-
+    padding:20px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(238, 238, 238, 0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(238, 238, 238, 0.75);
     box-shadow: 5px 5px 5px 0px rgba(238, 238, 238, 0.75);
