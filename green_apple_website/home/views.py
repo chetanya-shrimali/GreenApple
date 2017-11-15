@@ -1,9 +1,11 @@
+import json
+from urllib.request import urlopen
+
+# import twilio
+import twilio.rest
+from django.apps import apps
 from django.http import HttpResponse
 from django.shortcuts import render
-# import twilio
-# import twilio.rest
-import json
-from django.apps import apps
 
 
 # from urllib.request import urlopen

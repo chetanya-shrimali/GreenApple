@@ -1,14 +1,27 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect, HttpResponse
-from django.core.urlresolvers import reverse
-from drop_a_note.forms import *
-from django.views.decorators.csrf import csrf_protect
+from django.contrib import messages
+from django.contrib.messages import constants as messages
 from django.core.mail import EmailMessage
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_protect
+from drop_a_note.forms import *
 from validate_email import validate_email
+
+MESSAGE_TAGS = {
+    messages.ERROR: '',
+    50: 'critical',
+}
 
 
 def drop_note(request):
     return render(request, 'drop_a_note/contact.html')
+
+
+def my(request):
+    messages.add_message(request, messages.ERROR, 'Enter Valid Message!!')
+
+    return render(request, 'drop_a_note/contact.html', {})
 
 
 @csrf_protect
@@ -27,16 +40,17 @@ def contact_us(request):
             value = validate_email(email_address, verify=True)
             print(value)
             if value is None:
-                return HttpResponse("invalid mail")
+                messages.add_message(request, messages.ERROR, 'Enter Valid Message!!')
+                # return HttpResponse("invalid mail")
             else:
                 email = EmailMessage('Regarding feedback',
                                      email_address + "\n\n" + note_content,
                                      to=['chetanyashrimalie5@gmail.com',
                                          'nkchoudhary696@gmail.com'])
                 email.send()
-    
+
                 email = EmailMessage('Regarding feedback',
-                                     "Hey " + name + ",\n\n" + "We have successfully recieved your note!!",
+                                     "Hey " + name + ",\n\n" + "We have successfully received your note!!",
                                      to=[email_address])
                 email.send()
                 print('reached')

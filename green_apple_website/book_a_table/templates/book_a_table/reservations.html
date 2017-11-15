@@ -57,6 +57,16 @@
                                        placeholder="Email" required>
                                 <i class="fa fa-envelope"></i>
                             </div>
+
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <li{% if message.tags %}
+                                            class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
                             <div class="form-group relative">
                                 <select id="{{ book_form.total_persons1 }}" name="total_persons"
                                         class="form-control input" required>
