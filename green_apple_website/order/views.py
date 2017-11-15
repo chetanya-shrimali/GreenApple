@@ -1,8 +1,11 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.apps import apps
+from django.urls import reverse
+
 from order.models import Dish, Order
 from menu.models import SubMenu
+from order.forms import *
 
 
 def order(request):
@@ -46,3 +49,41 @@ def add_order(request, pk):
     Dish(dish_name, dish_price, order_list).save()
 
     return HttpResponse("added")
+
+
+def home_delivery(request):
+    if request.method == 'POST':
+        home_form = HomeForm(request.POST)
+
+        if home_form.is_valid():
+            homes = home_form.save(commit=False)
+            # name = home_form.cleaned_data['name']
+            # email = home_form.cleaned_data['email']
+            homes.save()
+            return HttpResponseRedirect(reverse('home:index'))
+        else:
+            print(home_form.errors)
+
+    else:
+        home_form = HomeForm()
+
+    return render(request, 'order/order_details.html', {'home_form': home_form})
+
+
+def pick_up(request):
+    if request.method == 'POST':
+        pick_form = PickUpForm(request.POST)
+
+        if pick_form.is_valid():
+            homes = pick_form.save(commit=False)
+            # name = home_form.cleaned_data['name']
+            # email = home_form.cleaned_data['email']
+            homes.save()
+            return HttpResponseRedirect(reverse('home:index'))
+        else:
+            print(pick_form.errors)
+
+    else:
+        pick_form = PickUpForm()
+
+    return render(request, 'order/order_details.html', {'pick_form': pick_form})
