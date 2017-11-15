@@ -46,11 +46,11 @@ def book_table(request):
         if book_form.is_valid():
             table = book_form.save()
             customer = book_form.cleaned_data['customer']
-            contact = book_form.cleaned_data['contact']
+            # contact = book_form.cleaned_data['contact']
             email = book_form.cleaned_data['email']
-            total_persons = book_form.cleaned_data['total_persons']
-            date = book_form.cleaned_data['date']
-            time = book_form.cleaned_data['time']
+            # total_persons = book_form.cleaned_data['total_persons']
+            # date = book_form.cleaned_data['date']
+            # time = book_form.cleaned_data['time']
             table.save()
             
             value = validate_email(email, verify=True)
