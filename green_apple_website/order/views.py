@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.apps import apps
-from order.models import Dish
+from order.models import Dish, Order
 
 
 def order(request):
@@ -25,6 +25,6 @@ def add_order_details(request, pk):
     print(add_sub_menu.price)
     name = add_sub_menu.dish_name
     price = add_sub_menu.price
-    dish = Dish(name=name, price=price, order=pk)
-    dish.save()
+    dish = Dish(name=name, price=price, order=Order.objects.get(pk=pk))
+    # dish.save()
     return HttpResponse("added")
