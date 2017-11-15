@@ -8,8 +8,8 @@ def menu(request):
     return render(request, 'menu/menu.html', {'all_menu': all_menu})
 
 
-def sub_menu(request, pk):
-    all_sub_menu = SubMenu.objects.filter(menu=pk)
+def sub_menu(request):
+    all_sub_menu = SubMenu.objects.all()
     all_menu = Menu.objects.all()
     # all_sub_menu = get_object_or_404(SubMenu, pk=pk)
     return render(request, 'menu/sub_menu.html',
