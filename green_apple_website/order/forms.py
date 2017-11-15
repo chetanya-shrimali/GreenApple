@@ -1,22 +1,15 @@
 from django import forms
 
-from .models import Order
+from order.models import Order, PickUp
 
 
-# class CustomerForm(forms.ModelForm):
-#     class Meta:
-#         model = Customer
-#         fields = ('name', 'address', 'phone_number',)
+class HomeForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('name', 'address', 'phone_number', 'message', 'email')
 
 
-# class OrderForm(forms.ModelForm)
-#     class Meta:
-#         model = Order
-#         fields = ('total_price', )
-#
-
-# class OrderDetailForm(forms.ModelForm):
-#     class Meta:
-#         model = OrderDetail
-#         fields = ('selected_item', 'quantity', 'price')
-
+class PickUpForm(forms.ModelForm):
+    class Meta:
+        model = PickUp
+        fields = ('name', 'contact', 'email')
