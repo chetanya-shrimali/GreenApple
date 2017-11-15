@@ -8,6 +8,11 @@ from validate_email import validate_email
 from django.contrib import messages
 
 
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+
 def drop_note(request):
     return render(request, 'drop_a_note/contact.html')
 

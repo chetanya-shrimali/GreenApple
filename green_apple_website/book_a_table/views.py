@@ -56,7 +56,7 @@ def book_table(request):
             value = validate_email(email, verify=True)
             print(value)
             if value is None:
-                messages.error(request, 'enter valid email')
+                messages.error(request, 'enter valid email',)
                 # return HttpResponse("invalid mail")
             else:
                 email = EmailMessage('Regarding Booking a Table',
