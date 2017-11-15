@@ -758,10 +758,9 @@ select:-webkit-autofill {
 .order-menu-card {
     margin: 40px 40px;
     padding: 20px;
-    border: 1px solid #3c763d;
-    border-radius: 5px;
-    background-color: rgba(67, 194, 50, 0.07);
-    box-shadow: 0 2px 15px 0px #aaaaaa;
+    border: 1px solid #aaaaaa;
+    background-color: rgba(250, 251, 252, 0.07);
+    box-shadow: 0 2px 10px 0px #aaaaaa;
 }
 
 .order-menu-card .table td {
