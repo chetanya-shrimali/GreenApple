@@ -28,7 +28,9 @@
               {% for menu in all_menu %}
               <li><a data-toggle="pill"
                      href="#{{ menu.id }}"
-                     style="text-transform: capitalize">{{ menu.category_name}}</a>
+                     style="text-transform: capitalize">
+                {{menu.category_name}}
+              </a>
               </li>
               {% endfor %}
             </ul>
