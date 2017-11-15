@@ -17,6 +17,7 @@ class Order(models.Model):
 class Dish(models.Model):
     order = models.ManyToManyField(Order)
     name = models.CharField(max_length=50)
+    price = models.IntegerField()
 
     def __str__(self):
         return self.name
