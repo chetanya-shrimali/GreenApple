@@ -16,8 +16,6 @@ def order(request):
 def order_details(request):
     return render(request, 'order/order_details.html')
 
-<<<<<<< HEAD
-=======
 
 def add_order_details(request, pk):
     menu_model = apps.get_model('menu.Menu')
@@ -30,4 +28,4 @@ def add_order_details(request, pk):
     dish = Dish(name=name, price=price, order=Order.objects.get(pk=pk))
     # dish.save()
     return HttpResponse("added")
->>>>>>> 950b5d2595a0194cdb6adb99e12fead261d62486
+
