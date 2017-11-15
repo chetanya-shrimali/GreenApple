@@ -8,6 +8,11 @@ from validate_email import validate_email
 from django.contrib import messages
 
 
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+
 def drop_note(request):
     return render(request, 'drop_a_note/contact.html')
 
@@ -23,7 +28,7 @@ def contact_us(request):
             name = note_form.cleaned_data['name']
             print(email_address + " -> " + str(name) + " -> " + str(
                 note_content))
-            # notes.save()
+            notes.save()
 
             value = validate_email(email_address, verify=True)
             print(value)

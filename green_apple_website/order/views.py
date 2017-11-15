@@ -28,3 +28,4 @@ def add_order_details(request, pk):
     dish = Dish(name=name, price=price, order=Order.objects.get(pk=pk))
     # dish.save()
     return HttpResponse("added")
+
