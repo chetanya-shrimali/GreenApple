@@ -31,18 +31,19 @@ def order_details(request):
 #
 #     return HttpResponse("added")
 
-def add_order(request, pk):
+def add_order(request, pk1, pk2):
     # sub_menu_model = apps.get_model('menu.SubMenu')
-    add_sub_menu = SubMenu.objects.get(pk=pk)
+    add_sub_menu = SubMenu.objects.get(pk=pk1)
 
     dish_name = add_sub_menu.dish_name
     dish_price = add_sub_menu.price
-
+    order_list = Order.objects.get(pk=pk2)
     print(dish_price)
     print(dish_name)
-    # order_m = get_object_or_404(sub_menu_model, pk=pk)
-    order_list = Order.objects.get(pk=pk)
+    print(order_list.id)
 
-    Dish(dish_name, dish_price, order_list).save()
+    dish = Dish.objects.create(name=dish_name, price=dish_price)
+    dish.order.add(Order.objects.get(pk=pk2))
+    dish.save()
 
-    return HttpResponse("added")
+    return render()
