@@ -2,6 +2,8 @@
 {% block title %}{% endblock %}
 {% load staticfiles %}
 {% block body %}
+
+
     <section id="image-back" class="no-margin">
 
         <div class="row">
@@ -14,6 +16,20 @@
 
     </section>
     <!-- Reservations-->
+
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message.message }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
 
     <section id="reservation" class="section">
         <div class="container">
