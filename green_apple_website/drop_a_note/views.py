@@ -23,7 +23,7 @@ def contact_us(request):
             name = note_form.cleaned_data['name']
             print(email_address + " -> " + str(name) + " -> " + str(
                 note_content))
-            # notes.save()
+            notes.save()
 
             value = validate_email(email_address, verify=True)
             print(value)
