@@ -5,7 +5,6 @@
 <section id="image-back" class="no-margin"
          xmlns="http://www.w3.org/1999/html"
          xmlns="http://www.w3.org/1999/html">
-
   <div class="row" style="margin: auto;">
     <div class="col-md-1"></div>
     <div class="col-md-10">
@@ -14,7 +13,9 @@
     <div class="col-md-1"></div>
   </div>
 
+
 </section>
+
 <section id="order">
   <div class="container">
     <div class="row">
@@ -27,8 +28,7 @@
               {% for menu in all_menu %}
               <li><a data-toggle="pill"
                      href="#{{ menu.id }}"
-                     style="text-transform: capitalize">{{ menu.category_name
-                }}</a>
+                     style="text-transform: capitalize">{{ menu.category_name}}</a>
               </li>
               {% endfor %}
             </ul>
