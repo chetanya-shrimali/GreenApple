@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.apps import apps
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_protect
 
 from order.models import Dish, Order
 from menu.models import SubMenu
@@ -51,14 +52,14 @@ def add_order(request, pk1, pk2):
                    'all_sub_menu': all_sub_menu})
 
 
+@csrf_protect
 def home_delivery(request):
     if request.method == 'POST':
         home_form = HomeForm(request.POST)
 
         if home_form.is_valid():
             homes = home_form.save(commit=False)
-            # name = home_form.cleaned_data['name']
-            # email = home_form.cleaned_data['email']
+
             homes.save()
             return HttpResponseRedirect(reverse('home:index'))
         else:
@@ -71,6 +72,7 @@ def home_delivery(request):
                   {'home_form': home_form})
 
 
+@csrf_protect
 def pick_up(request):
     if request.method == 'POST':
         pick_form = PickUpForm(request.POST)

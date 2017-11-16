@@ -1,15 +1,11 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect, HttpResponse, request
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from drop_a_note.forms import NoteForm
 from django.views.decorators.csrf import csrf_protect
 from django.core.mail import EmailMessage
 from validate_email import validate_email
 from django.contrib import messages
-
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
-}
 
 
 def drop_note(request):
@@ -32,8 +28,7 @@ def contact_us(request):
             value = validate_email(email_address, verify=True)
             print(value)
             if value is None:
-                messages.error(request, 'enter valid email')
-                # return HttpResponse("invalid mail")
+                return HttpResponse("invalid mail")
             else:
                 email = EmailMessage('Regarding feedback',
                                      email_address + "\n\n" + note_content,
@@ -42,7 +37,10 @@ def contact_us(request):
                 email.send()
 
                 email = EmailMessage('Regarding feedback',
-                                     "Hey " + name + ",\n\n" + "We have successfully recieved your note!!",
+                                     "Hey " + name + ",\n\n" + "We have "
+                                                               "successfully"
+                                                               " recieved "
+                                                               "your note!!",
                                      to=[email_address])
                 email.send()
                 print('reached')

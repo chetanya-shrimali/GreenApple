@@ -22,14 +22,16 @@
       <div class="col-sm-8" style="margin-top: 2%;">
         <div class="order-type">
           <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#pickUp">Pick
-              Up</a></li>
-            <li><a data-toggle="tab" href="#homeDelivery">Home Delivery</a>
+            <li><a data-toggle="tab" href="#homeDelivery" class="active">Home
+              Delivery</a>
             </li>
+            <li><a data-toggle="tab" href="#pickUp">Pick
+              Up</a></li>
+
           </ul>
 
           <div class="tab-content">
-            <div id="pickUp" class="tab-pane fade in active">
+            <div id="pickUp" class="tab-pane fade in">
               <h2>PICK UP</h2>
               <h4>Order online or call us on 079-23223440 between 10:00AM -
                 9:00PM.</h4>
@@ -44,6 +46,7 @@
                   <form class="form-horizontal login-form"
                         action="{% url 'order:pick-up' %}"
                           method="post">
+                    {% csrf_token %}
                     <div class="form-group relative">
                       <input id="{{ pick_form.name1 }}" name="name"
                              class="form-control input"
@@ -63,12 +66,19 @@
                              placeholder="Email" required>
                       <i class="fa fa-envelope"></i>
                     </div>
+                    <div class="form-group">
+                      {# <a href="mailto:201552074@iiitvadodara.ac.in"><input
+                        name="Login" type="submit" value="Send"
+                        class="btn btn-success btn-lg btn-block"></a>#}
+                      <input type="submit" value="Send" id="submit1"
+                             class="btn btn-green btn-lg btn-block">
+                    </div>
                   </form>
                 </div>
                 <div class="col-sm-1"></div>
               </div>
             </div>
-            <div id="homeDelivery" class="tab-pane fade">
+            <div id="homeDelivery" class="tab-pane fade in active">
               <h2>HOME DELIVERY</h2>
               <h4>Order online or call us on 079-23223440 between 10:00AM -
                 9:00PM.</h4>
@@ -80,36 +90,45 @@
                   <form class="form-horizontal login-form"
                         action="{% url 'order:home-delivery' %}"
                           method="post">
+                    {% csrf_token %}
                     <div class="form-group relative">
-                      <input id="{{ home_form.name1 }}" name="name"
+                      <input id="{{ home_form.name2 }}" name="name"
                              class="form-control input"
                                type="text"
                                placeholder="Name" required>
                       <i class="fa fa-user"></i>
                     </div>
                     <div class="form-group relative">
-                        <input id="{{ home_form.phone_number }}" name="contact"
+                      <input id="{{ home_form.phone_number1 }}"
+                             name="contact"
                                class="form-control input" type="tel"
                                placeholder="Contact" required>
                       <i class="fa fa-phone"></i>
                     </div>
                     <div class="form-group relative">
-                        <input id="{{ home_form.email }}" name="email"
+                      <input id="{{ home_form.email2 }}" name="email"
                                class="form-control input" type="email"
                                placeholder="Email" required>
                       <i class="fa fa-envelope"></i>
                     </div>
                     <div class="form-group relative">
-                        <input id="{{ home_form.address }}" name="address"
+                      <input id="{{ home_form.address2 }}" name="address"
                                class="form-control input" type="text"
                                placeholder="Address" required>
                       <i class="fa fa-map-marker"></i>
                     </div>
                     <div class="form-group relative">
-                      <input id="{{ home_form.message }}" name="address"
+                      <input id="{{ home_form.message2 }}" name="address"
                              class="form-control input" type="text"
                              placeholder="Message" required>
                       <i class="fa fa-microphone"></i>
+                    </div>
+                    <div class="form-group">
+                      {# <a href="mailto:201552074@iiitvadodara.ac.in"><input
+                        name="Login" type="submit" value="Send"
+                        class="btn btn-success btn-lg btn-block"></a>#}
+                      <input type="submit" value="Send" id="submit2"
+                             class="btn btn-green btn-lg btn-block">
                     </div>
                   </form>
                 </div>
