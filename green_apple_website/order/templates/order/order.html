@@ -65,7 +65,7 @@
                     </td>
                     <td class="price">&#8377;{{ submenu.price }}</td>
                     <td><a
-                        href="{% url 'order:add_detail' submenu.id 1  %}"
+                        href="{% url 'order:add_detail' submenu.id 1 %}"
                         style="color: #3c763d"><i
                         class="fa fa-plus" aria-hidden="true"></i></a>
                     </td>
@@ -86,9 +86,13 @@
           <hr>
           <div class="row">
             <div class="cart">
-              <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
-              <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
-              <h5>1 &times; Paneer Tandoori &emsp13;&emsp13;&emsp13;&emsp13;&#8377;150 </h5>
+              {% if final_dishes is not None %}
+              {% for list in final_dishes %}
+              <h5>1 &times;
+                &emsp13;&emsp13;{{ list.name }}&emsp13;&#8377;{{ list.price
+                }} </h5>
+              {% endfor %}
+              {% endif %}
             </div>
             <div class="total">
               <hr style="margin: 0 30px;">
@@ -97,7 +101,7 @@
 
             <button type="button" class="btn  btn-lg"
                     style="margin: 10px 40px; padding: 7px 40px;">
-              CONTINUE
+              <a href="{% url 'order:order_details'  %}">CONTINUE</a>
             </button>
           </div>
         </div>
