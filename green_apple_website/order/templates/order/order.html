@@ -89,14 +89,14 @@
               {% if final_dishes is not None %}
               {% for list in final_dishes %}
               <h5>1 &times;
-                &emsp13;&emsp13;{{ list.name }}&emsp13;&#8377;{{
-                list.price}} </h5>
+                &emsp13;&emsp13;{{ list.name
+                }}&emsp13;&#8377;{{list.price}} </h5>
               {% endfor %}
               {% endif %}
             </div>
             <div class="total">
               <hr style="margin: 0 30px;">
-              <h4>Sub Total:</h4>
+              <h4>Sub Total: {{ sum }}</h4>
             </div>
             <form action="" method="Post">
               {% csrf_token %}

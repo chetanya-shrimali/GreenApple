@@ -43,7 +43,9 @@ def add_order(request, pk1, pk2):
 
     get_dishes = Dish.objects.all()
     final_dishes = ""
+
     value = ""
+    sum = 0
     for i in get_dishes:
         print(order_list.id)
         print(pk2)
@@ -57,6 +59,9 @@ def add_order(request, pk1, pk2):
                     order=i.order.get(pk=order_list.id)).all()
                 print(final_dishes)
                 print(value.user_email)
+                for i in final_dishes:
+                    sum += i.price
+
                 break
             else:
                 continue
@@ -66,7 +71,7 @@ def add_order(request, pk1, pk2):
     return render(request, 'order/order.html',
                   {'final_dishes': final_dishes, 'all_menu': all_menu,
                    'all_sub_menu': all_sub_menu, 'order_id': pk2,
-                   'value': value})
+                   'value': value, 'sum': sum})
 
 
 @csrf_protect
