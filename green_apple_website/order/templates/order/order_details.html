@@ -67,10 +67,8 @@
                       <i class="fa fa-envelope"></i>
                     </div>
                     <div class="form-group">
-                      {# <a href="mailto:201552074@iiitvadodara.ac.in"><input
-                        name="Login" type="submit" value="Send"
-                        class="btn btn-success btn-lg btn-block"></a>#}
-                      <input type="submit" value="Send" id="submit1"
+
+                      <input type="submit" value="Send" id="submit"
                              class="btn btn-green btn-lg btn-block">
                     </div>
                   </form>
@@ -92,42 +90,41 @@
                           method="post">
                     {% csrf_token %}
                     <div class="form-group relative">
-                      <input id="{{ home_form.name2 }}" name="name"
+                      <input id="{{ home_form.user1 }}" name="user"
                              class="form-control input"
-                               type="text"
-                               placeholder="Name" required>
+                             type="text"
+                             placeholder="Name" required>
                       <i class="fa fa-user"></i>
                     </div>
                     <div class="form-group relative">
                       <input id="{{ home_form.phone_number1 }}"
-                             name="contact"
-                               class="form-control input" type="tel"
-                               placeholder="Contact" required>
+                             name="phone_number"
+                             class="form-control input" type="tel"
+                             placeholder="Contact" required>
                       <i class="fa fa-phone"></i>
                     </div>
                     <div class="form-group relative">
-                      <input id="{{ home_form.email2 }}" name="email"
-                               class="form-control input" type="email"
-                               placeholder="Email" required>
+                      <input id="{{ home_form.user_email1 }}" name="user_email"
+                             class="form-control input" type="email"
+                             placeholder="Email" required>
                       <i class="fa fa-envelope"></i>
                     </div>
                     <div class="form-group relative">
-                      <input id="{{ home_form.address2 }}" name="address"
-                               class="form-control input" type="text"
-                               placeholder="Address" required>
+                      <input id="{{ home_form.user_address1 }}"
+                             name="user_address"
+                             class="form-control input" type="text"
+                             placeholder="Address" required>
                       <i class="fa fa-map-marker"></i>
                     </div>
                     <div class="form-group relative">
-                      <input id="{{ home_form.message2 }}" name="address"
+                      <input id="{{ home_form.user_message1 }}"
+                             name="user_message"
                              class="form-control input" type="text"
                              placeholder="Message" required>
                       <i class="fa fa-microphone"></i>
                     </div>
                     <div class="form-group">
-                      {# <a href="mailto:201552074@iiitvadodara.ac.in"><input
-                        name="Login" type="submit" value="Send"
-                        class="btn btn-success btn-lg btn-block"></a>#}
-                      <input type="submit" value="Send" id="submit2"
+                      <input type="submit" value="Send"
                              class="btn btn-green btn-lg btn-block">
                     </div>
                   </form>
