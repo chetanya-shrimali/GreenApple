@@ -4,8 +4,8 @@ from order.models import Order, Dish, PickUp
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = (
-        'name', 'address', 'phone_number', 'date', 'message', 'email')
+    list_display = ('user', 'phone_number', 'user_email', 'user_address',
+                    'user_message')
 
 
 class DishAdmin(admin.ModelAdmin):

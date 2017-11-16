@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block body %}
+<section id="image-back" class="no-margin"
+         xmlns="http://www.w3.org/1999/html"
+         xmlns="http://www.w3.org/1999/html">
+  <div class="row" style="margin: auto;">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <img src="{% static 'img/back1.jpg' %}"/>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+
+</section>
+
+<section id="order">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-8">
+
+        <h2>Order Confirmation</h2>
+        <p>You will recieve a confirmation mail shortly</p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -65,7 +65,7 @@
                     </td>
                     <td class="price">&#8377;{{ submenu.price }}</td>
                     <td><a
-                        href="{% url 'order:add_detail' submenu.id 1 %}"
+                        href="{% url 'order:add_detail' submenu.id order_id %}"
                         style="color: #3c763d"><i
                         class="fa fa-plus" aria-hidden="true"></i></a>
                     </td>
@@ -89,20 +89,22 @@
               {% if final_dishes is not None %}
               {% for list in final_dishes %}
               <h5>1 &times;
-                &emsp13;&emsp13;{{ list.name }}&emsp13;&#8377;{{ list.price
-                }} </h5>
+                &emsp13;&emsp13;{{ list.name
+                }}&emsp13;&#8377;{{list.price}} </h5>
               {% endfor %}
               {% endif %}
             </div>
             <div class="total">
               <hr style="margin: 0 30px;">
-              <h4>Sub Total:</h4>
+              <h4>Sub Total: {{ sum }}</h4>
             </div>
-
-            <button type="button" class="btn  btn-lg"
+            <form action="" method="Post">
+              {% csrf_token %}
+              <button type="submit" class="btn  btn-lg"
                     style="margin: 10px 40px; padding: 7px 40px;">
-              <a href="{% url 'order:order_details'  %}">CONTINUE</a>
+                <a href="{% url 'order:mail_order' order_id %}">Order Now</a>
             </button>
+            </form>
           </div>
         </div>
       </div>

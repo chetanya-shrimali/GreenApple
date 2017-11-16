@@ -13,15 +13,15 @@ class PickUp(models.Model):
 
 
 class Order(models.Model):
-    name = models.CharField(max_length=50, default='customer name')
-    address = models.CharField(max_length=200, null=True)
+    user = models.CharField(max_length=50, default='customer name')
     phone_number = models.IntegerField(null=True)
+    user_email = models.EmailField(max_length=100, null=True)
+    user_address = models.CharField(max_length=200, null=True)
+    user_message = models.CharField(max_length=500, null=True)
     date = models.DateField(default=datetime.date.today)
-    message = models.CharField(max_length=500, null=True)
-    email = models.EmailField(max_length=100, null=True)
 
     def __str__(self):
-        return self.name + " -> " + str(self.id)
+        return self.user + " -> " + str(self.id)
 
 
 class Dish(models.Model):
