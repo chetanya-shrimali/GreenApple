@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+    <section id="image-back" class="no-margin">
+
+    <div class="row" style="margin: auto;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="{% static 'img/back1.jpg' %}"/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</section>
+
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>
+                    <div class="alert alert-{{ message.level_tag }}" role="alert">
+                        {{ message.message }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <h2 style="margin-top: 10px;">CONTACT US</h2>
+                <hr>
+                <div class="col-sm-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.3817298821928!2d72.
+                    64618911497156!3d23.22919218484891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2bbce4c6
+                    72af%3A0x32c7f2683fae84a9!2sGreen+Apple+Restaurant!5e0!3m2!1sen!2sin!4v1510552761468"
+                            width="383.46" height="395" frameborder="0"
+                            style="margin-top:30px; box-shadow: 1px 1px 3px 3px #b9b9b9;"
+                            allowfullscreen></iframe>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="contact-group">
+                        <div class="welcome"><h3>Drop us a Note !</h3><br>
+                        </div>
+                        <form class="form-horizontal login-form" id="note_form" method="post">
+                            {% csrf_token %}
+
+                            <div class="form-group relative">
+                                <input id="{{ note_form.name1 }}" name="name" class="form-control input-lg" type="text" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="form-group relative">
+                            <input id="{{ note_form.email1 }}" name="email" class="form-control input-lg" type="email" placeholder="Email ID" required>
+                            </div>
+
+                            <div class="form-group relative password">
+                                <textarea id="{{ note_form.note1 }}" name="note" class="form-control input-lg" style="height: 80px;" placeholder="Message" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+{#                                <a href="mailto:201552074@iiitvadodara.ac.in"><input name="Login" type="submit" value="Send" class="btn btn-success btn-lg btn-block"></a>#}
+                              <input type="submit" value="Send"
+                                     class="btn btn-green btn-lg btn-block"
+                                     onclick="{% url 'home:index' %}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <br><br><br><br>
+
+{% endblock %}

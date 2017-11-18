@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+
+<section id="sub-menu" class="section">
+  <div class="container">
+    <div class="row">
+      <h2 style="margin-top: 10px;">OUR MENU</h2>
+      <hr>
+      <div class="col-md-4">
+        <ul class="nav nav-pills nav-stacked" style="margin-top: 30px;">
+          {% for menu in all_menu %}
+          <li><a data-toggle="pill"
+                 href="#{{ menu.id }}"
+                 style="text-transform: capitalize">{{ menu.category_name}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-8">
+        <div class="sub-menu-card"
+             style="background-image: url('{% static 'img/back.jpg' %}');">
+          <div class="tab-content">
+            {% for menu in all_menu %}
+            <div id="{{ menu.id }}"
+                 class="tab-pane fade in {% if menu.id == 1 %}active{% else %} {% endif %}">
+              <div class="table-flexible">
+                <table class="table borderless">
+                  <tbody>
+                  <tr>
+                    <td colspan="3" class="text-center">
+                      <span class="secTitle"
+                            style="text-transform: capitalize">{{ menu.category_name }} <hr></span>
+                    </td>
+                  </tr>
+                  {% for submenu in all_sub_menu %}
+                  {% if submenu.menu == menu %}
+                  <tr>
+                    <td>
+                      <span class="dishName"
+                            style="text-transform: capitalize">{{ submenu.dish_name }}</span>
+                    </td>
+                    <td class="price">&#8377;{{ submenu.price }}</td>
+                  </tr>
+                  {% endif %}
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{#{% for sub_menu in all_sub_menu %}#}
+{#<h2>{{ sub_menu.dish_name }}</h2>#}
+{#<p>{{ sub_menu.price }}</p>#}
+{#{% endfor %}#}
+{% endblock %}

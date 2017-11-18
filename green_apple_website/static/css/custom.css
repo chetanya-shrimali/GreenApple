@@ -1,0 +1,114 @@
+.navbar {
+    background-color: #1c262f;
+}
+.navbar .icon-bar {
+    background-color: #fafbfc;
+}
+.navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+    color: #fafbfc;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        font-family: 'Open Sans', sans-serif;
+        color: #fafbfc;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+@media (min-width: 767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #2e3d49;
+    color: #fafbfc;
+}
+
+.navbar:hover {
+    background-color: #2e3d49;
+    color: #fafbfc;
+}
+/*--------------------------------------------------------------------------
+	Footer Style
+--------------------------------------------------------------------------*/
+.footer {
+    background: #1c262f;
+    color: #bdbdbd;
+    margin-top: -20px;
+    padding: 0px 20px 10px 20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.4);
+}
+
+.footer h2 {
+    color: #fafbfc;
+    font-size: 1.5em;
+}
+
+.footer ul {
+    padding: 0;
+
+}
+
+.footer-navigate-section li {
+    line-height: 20px !important;
+
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #cbcbcb;
+    border-top: 1px groove #525c65;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+.block h2 {
+    color: #bfbfbf;
+}
+
+.address-block li {
+    margin-bottom: 20px;
+
+}
+
+.address-block li i {
+    margin-right: 15px;
+    font-size: 20px;
+    width: 20px;
+}
+
+/*******************************
+Background-Image header
+ ********************************/
+.image-style {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+

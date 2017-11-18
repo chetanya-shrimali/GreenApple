@@ -1,0 +1,26 @@
+{
+  "status": "OK",
+  "rows": [
+    {
+      "elements": [
+        {
+          "duration": {
+            "text": "3 hours 51 mins",
+            "value": 13882
+          },
+          "distance": {
+            "text": "362 km",
+            "value": 361951
+          },
+          "status": "OK"
+        }
+      ]
+    }
+  ],
+  "origin_addresses": [
+    "Washington, DC, USA"
+  ],
+  "destination_addresses": [
+    "New York, NY, USA"
+  ]
+}
