@@ -47,7 +47,7 @@ olefile==0.44
 onboard==1.2.0
 passlib==1.7.1
 pexpect==4.0.1
-Pillow==4.2.1
+Pillow==6.2.0
 pipreqs==0.4.9
 progressbar==2.3
 psycopg2==2.7.1
