@@ -2,7 +2,7 @@ amqp==2.2.2
 argcomplete==0.8.1
 beautifulsoup4==4.4.1
 billiard==3.5.0.3
-bleach==2.0.0
+bleach==3.1.1
 Brlapi==0.6.4
 celery==4.0.2
 certifi==2017.7.27.1
