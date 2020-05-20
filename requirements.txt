@@ -31,7 +31,7 @@ google-api-python-client==1.6.3
 gunicorn==19.7.1
 html5lib==0.999999999
 httpauth==0.3
-httplib2==0.10.3
+httplib2==0.18.0
 idna==2.6
 itsdangerous==0.24
 Jinja2==2.9.6
