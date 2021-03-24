@@ -76,7 +76,7 @@ render==1.0.0
 reportlab==3.3.0
 requests==2.9.1
 requests-oauthlib==0.8.0
-rsa==3.4.2
+rsa==4.1
 sessioninstaller==0.0.0
 setupfiles==0.0.50
 six==1.10.0
