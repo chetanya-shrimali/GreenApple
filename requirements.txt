@@ -38,7 +38,7 @@ Jinja2==2.9.6
 kombu==4.1.0
 language-selector==0.1
 louis==2.6.4
-lxml==3.5.0
+lxml==4.6.5
 Markdown==2.6.8
 MarkupSafe==1.0
 oauth2client==4.1.2
